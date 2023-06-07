@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """
-    Post model
+    Model for the Posts
     """
     image_filter_selections = [
         ('grow', 'Grow'),
