@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Profile
+from .models import Post
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -14,5 +14,5 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = [
             'id', 'owner', 'date_created', 'date_updated', 'name',
-            'description', 'name', 'image', 'city', 'is_owner',
+            'description', 'image', 'city', 'is_owner',
         ] 
