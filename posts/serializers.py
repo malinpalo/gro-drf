@@ -29,7 +29,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = [
-            'id', 'owner', 'profile_id', 'profile_image',
+            'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
             'date_created', 'date_updated',
-            'title', 'description', 'image', 'city', 'image_filter'
+            'title', 'description', 'image', 'image_filter'
         ]
