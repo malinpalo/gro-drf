@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """
-    Model for the Posts
+    Model for the Posts, related to 'owner'.
     """
-    image_filter_selections = [
+    post_filter_selections = [
         ('grow', 'Grow'),
         ('seeds', 'Seeds'),
         ('plant', 'Plant'),
@@ -33,8 +33,8 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../gro_post_default.jgp', blank=True
     )
-    image_filter = models.CharField(
-        max_length=32, choices=image_filter_selections, default='normal'
+    post_filter = models.CharField(
+        max_length=32, choices=post_filter_selections, default='normal'
     )
 
     class Meta:
