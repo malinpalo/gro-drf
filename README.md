@@ -20,10 +20,8 @@
 * [Testing](#testing)
 * [Deployment & Local Development](#deployment--local-development)
   * [Deployment](#deployment)
-  * [Local Development](#local-development)
     * [How to Fork](#how-to-fork)
     * [How to Clone](#how-to-clone)
-* [Testing](#testing)
 * [Credits](#credits)
   * [Code Used](#code-used)
   * [Content](#content)
@@ -96,3 +94,121 @@ The relationship between all of the above models is summarized in the following 
 
 # **Testing**
 Please click [**_here_**](TESTING.md) to read more information about testing Gro-drf.
+
+# **Deployment & Local Development**
+  * [Deployment](#deployment)
+  The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the process below:
+
+  1. To begin with create a GitHub repository from the [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template) by following the link and then click 'Use this template'.
+
+2. Fill in the details for the new repository and then click 'Create Repository From Template'.
+
+3. When the repository has been created, click on the 'Gitpod' button to open it in the GitPod Editor.
+
+4. Install Django and the supporting libraries that are needed, using the following commands in the terminal:
+
+* ```pip3 install 'django<4' gunicorn```
+* ```pip3 install 'dj_database_url psycopg2```
+* ```pip3 install 'dj3-cloudinary-storage```
+
+5. When Django and the libraries are installed create a requirements file.
+
+* ```pip3 freeze --local > requirements.txt``` - This will create and add required libraries to requirements.txt
+
+
+6. It's time to create the project.
+
+* ```django-admin startproject YOUR_PROJECT_NAME .``` - This will create the new project.
+
+7. Now when the project is created lets create the applications. My project consists of the following apps; Profiles, Comments, Contact, Posts, Followers and likes.
+
+* ```python3 manage.py startapp APP_NAME``` - This will create an application
+
+8. Add the applications to settings.py in the INSTALLED_APPS list.
+
+8. It is time to do our first migration and run the server to test that everything works as expected. Please write the commands below.
+
+* ```python3 manage.py makemigrations``` - This will prepare the migrations
+* ```python3 manage.py migrate``` - This will migrate the changes
+* ```python3 manage.py runserver``` - Runs the server. Click the open browser button that will be visible after the command is run to test it.
+
+9. Next we create our application on Heroku, attach a database, prepare our environment and settings.py file and setup the Cloudinary storage for our static and media files.
+
+* To create a new app: once signed into your [Heroku](https://www.heroku.com/) account, click on the button labeled 'New'. 
+
+10. Choose a unique app name, choose your region and click 'Create app".
+
+11. Next we need to connect an external PostgreSQL database to the app from [ElephantSQL](https://customer.elephantsql.com/login).  Once logged into your ElephantSQL dashboard, you click 'Create New Instance' to create a new database. Give the database a: 
+* Name
+* Tiny Turtle Free Plan
+* Selected data center near you and click 'Create Instance'. Return to your ElephantSQL Dashboard, and click into your new database instance. Copy the Database URL and head back to Heroku.
+
+12. Back in your Heroku app settings, click on the 'Reveal Config Vars' button. Create a config variable called DATABASE_URL and paste in the URL you copied from ElephantSQL. This connects the database into the app. 
+
+13. Go back to GitPod and create a new env.py in the top level directory. Then add these rows.
+
+* ```import os``` - This imports the os library
+* ```os.environ["DATABASE_URL"]``` - This sets the environment variables.
+* ```os.environ["SECRET_KEY"]``` - Here you can choose whatever secret key you want.
+
+14. Back in the Heroku Config Vars settings, create another variable called SECRET_KEY and copy in the same secret key as you added into the env.py file. Don't forget to add this env.py file into the .gitignore file so that it isn't commited to GitHub for other users to find. 
+
+15. Now we have to connect to our environment and settings.py file. In the settings.py, add the following code:
+
+```import os```
+
+```import dj_database_url```
+
+```if os.path.isfile("env.py"):```
+
+```import env```
+
+16. In the settings file, remove the insecure secret key and replace it with:
+```SECRET_KEY = os.environ.get('SECRET_KEY')```
+
+17. Comment out the old database settings in the settings.py file (this is because we are going to use the postgres database instead of the sqlite3 database).
+
+Instead, we add the link to the DATABASE_URL that we added to the environment file earlier.
+
+18. Save all your fields and migrate the changes again.
+
+```python3 manage.py migrate```
+
+19. Now we can set up [Cloudinary](https://cloudinary.com/users/login?RelayState=%2Fconsole%2Fmedia_library%2Ffolders%2Fhome%3Fconsole_customer_external_id%3Dc-95a4cb26371c4a6bc47e19b0f130a1#gsc.tab=0) (this is where we will store our static files). First you need to create a Cloudinary account and from the Cloudinary dashboard copy the API Environment Variable.
+
+20. Go back to the env.py file in Gitpod and add the Cloudinary url (it's very important that the url is correct):
+
+```os.environ["CLOUDINARY_URL"] = "cloudinary://************************"```
+
+21. Head back to Heroku and add the Cloudinary url in Config Vars. Add a disable collectstatic variable to get our first deployment to Heroku to work.
+
+22. Back in the settings.py file, we now need to add our Cloudinary Libraries we installed earlier to the INSTALLED_APPS list. Here it is important to get the order correct.
+
+* cloudinary_storage
+* django.contrib.staticfiles
+* cloudinary
+
+23. For Django to be able to understand how to use and where to store static files we need to add some extra rows to the settings.py file.
+
+24. To be able to get the application to work through Heroku we also need to add our Heroku app and localhost to the ALLOWED_HOSTS list:
+
+```ALLOWED_HOSTS = ['happening-api-kelz.herokuapp.com', 'localhost']```
+
+25. Create the basic file directory in Gitpod.
+
+* Create a file called **Procfile* and add the line ```web: gunicorn PROJ_NAME.wsgi?``` to it.
+
+26. Save all the files and prepare for the first commit and push to Github by writing the lines below.
+
+* ```git add .```
+* ```git commit -m "Deployment Commit```
+* ```git push```
+
+27. It's time for deployment. Scroll to the top of the settings page in Heroku and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
+
+28. Scroll down to the manual deployment section and click 'Deploy Branch'. I hope that the deployment went all good!
+
+
+  
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
