@@ -7,7 +7,7 @@
 * [**Testing**](<#testing>)
     * [Code Validation](<#code-validation>)
     * [Manual Testing](<#manual-testing>)
-    * [Known Bugs](<#known-bugs>)
+    * [Bugs](<#bugs>)
 
 ## Code Validation 
 
@@ -139,8 +139,8 @@ The GRO-DRF has been passed through the internal PEP8 validation tests.
 | &check; | Can delete own profile
 | &check; | Can't delete someone else's profile
 
-## Known Bugs
+## Bugs
 
-### Resolved bugs
+None so far.
 
-Please click [**_here_**](README.md) to return to the Happening API README file.
+Please click [**_here_**](README.md) to return to the Gro-drf README file.
