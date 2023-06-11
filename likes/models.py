@@ -6,7 +6,7 @@ from posts.models import Post
 class Like(models.Model):
     """
     Model for likes related to 'owner' and 'post'.
-       """
+    """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
         Post, related_name='likes', on_delete=models.CASCADE

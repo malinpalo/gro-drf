@@ -8,7 +8,7 @@ class FollowerList(generics.ListCreateAPIView):
     """
     Lists all followers of/for a user, 
     follow a user if logged in,
-    assoociate the current logged in usr with a follower.
+    assoociate the current logged in user with a follower.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Follower.objects.all()
@@ -20,7 +20,7 @@ class FollowerList(generics.ListCreateAPIView):
 
 class FollowerDetail(generics.RetrieveDestroyAPIView):
     """
-    Retrive or unfollow a follower if owner.
+    Retrive or destroy a follower if owner.
     """
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Follower.objects.all()

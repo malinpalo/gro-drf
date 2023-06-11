@@ -8,7 +8,8 @@ from gro_drf.permissions import IsOwnerOrReadOnly
 
 class ProfileList(generics.ListAPIView):
     """
-    Lists all profiles
+    Lists all profiles,
+    creation is handled by django signals.
     """
     queryset = Profile.objects.annotate(
         posts_count=Count('owner__post', distinct=True),

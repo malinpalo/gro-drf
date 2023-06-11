@@ -6,8 +6,7 @@ from likes.serializers import LikeSerializer
 
 class LikeList(generics.ListCreateAPIView):
     """
-    List all the likes 
-    or if you are logged in you can like a post.
+    If logged in: list likes and/or create a like.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = LikeSerializer
@@ -19,7 +18,7 @@ class LikeList(generics.ListCreateAPIView):
 
 class LikeDetail(generics.RetrieveDestroyAPIView):
     """
-    Delete a like or retrive it by id if its yours.
+    Delete a like or retrive it by id if owner.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = LikeSerializer
