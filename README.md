@@ -39,6 +39,8 @@ I built this API using Agile principles right from the start by creating user st
 ## User Stories
 I have included links to the [GitHub Issues](https://github.com/malinpalo/gro/issues) for this project, as well as the [KANBAN board](https://github.com/malinpalo/gro/milestones).
 
+[Back to top](<#contents>)
+
 # **Database Design**
 
 ## Models
@@ -51,15 +53,20 @@ The following models was created by me for the Gro drf:
  * Follow (For users to follow other users of the site)
  * Contact (To send an message to the admin of the site)
 
+[Back to top](<#contents>)
 
 ## Entity relationship diagram
 The relationship between all of the above models is summarized in the following diagram
 [ERD](https://res.cloudinary.com/dz0w8vqzx/image/upload/v1686515958/ERD_qrhzwo.png).
 
+[Back to top](<#contents>)
+
 # **Technologies Used**
 
 ## Languages
  * [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the DRF backend framework.
+
+[Back to top](<#contents>)
 
 ## Frameworks and Software
 
@@ -68,6 +75,8 @@ The relationship between all of the above models is summarized in the following 
 * [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories and bug reports.
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 * [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project.
+
+[Back to top](<#contents>)
 
 ## Libraries
 * [asgiref](https://pypi.org/project/asgiref/)
@@ -91,8 +100,11 @@ The relationship between all of the above models is summarized in the following 
 * [requests-oauhlib](https://pypi.org/project/requests-oauthlib/) 
 * [sqlparse](https://pypi.org/project/sqlparse/)
 
+[Back to top](<#contents>)
 # **Testing**
 Please click [**_here_**](TESTING.md) to read more information about testing Gro-drf.
+
+[Back to top](<#contents>)
 
 # **Deployment & Local Development**
   * [Deployment](#deployment)
@@ -207,13 +219,15 @@ Instead, we add the link to the DATABASE_URL that we added to the environment fi
 
 28. Scroll down to the manual deployment section and click 'Deploy Branch'. I hope that the deployment went all good!
 
-
+[Back to top](<#contents>)
   
 ## How to Fork
 By forking the GitHub account it is possible to make an independent copy of a GitHub Repository.  
 The copy can then be viewed and it is also possible to make changes in the copy without affecting the original repository. To fork the repository, follow these steps:
 
 1. After logging in to GitHub, locate the repository. On the top right side of the page there is a 'Fork' button. Click on the button to create a copy of the original repository.
+
+[Back to top](<#contents>)
 
 ## How to Clone
 
