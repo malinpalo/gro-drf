@@ -1,5 +1,14 @@
 # Gro - drf
+Gro is social network plattform designed for plant loving users around Gothenburg. 
+The primary goals of the web app are to:
 
+1) Provide plant lovers a place to meet up on the net to share thoughts, ideas and knowledge about plants and gardening.
+
+2) Deliver a simple and intuitive user experience, suitable for users in all ages. 
+
+3) Offer a minimal set of features chosen in order to deliver a useful application within an achievable development timeframe, while laying a foundation for additional features in the future.
+
+This is the repository for the React backend of Gro.
 
 #### DEPLOYED BACKEND API [LINK]()
 #### DEPLOYED FRONTEND [LINK - LIVE SITE]()
@@ -17,15 +26,13 @@
   * [Languages](#languages)
   * [Frameworks and software](#frameworks-and-software)
   * [Libraries](#libraries)
-  * [Media](#media)
 * [Testing](#testing)
 * [Deployment](#deployment)
     * [How to Fork](#how-to-fork)
     * [How to Clone](#how-to-clone)
 * [Credits](#credits)
   * [Code Used](#code-used)
-  * [Content](#content)
-  * [Media](#media)
+  * [Online Resources](#online-resources)
   * [Acknowledgments](#acknowledgments)
 
 
@@ -35,10 +42,12 @@ The overall structure of the project was modelled on the [drf-api](https://githu
 I've tried to customize the walkthrough where possible to fit the scope for my own project. I also added a custom contact model.
 
 ## Agile Workflow
-I built this API using Agile principles right from the start by creating user stories in the front end project for the developer/superuser to follow.
+I built this API using Agile principles right from the start by creating epics and user stories for the front end application for the developer/superuser to follow.
+The user stories were used to inform wireframes mapping out the intended functionality and 'flow' through the app.
+For more details see the [repo for the frontend React application](https://github.com/malinpalo/gro)
 
 ## User Stories
-I have included links to the [GitHub Issues](https://github.com/malinpalo/gro/issues) for this project, as well as the [KANBAN board](https://github.com/malinpalo/gro/milestones).
+Here you will find the [GitHub Issues](https://github.com/malinpalo/gro/issues) for this project, as well as the [KANBAN board](https://github.com/malinpalo/gro/milestones).
 
 [Back to top](<#contents>)
 
@@ -251,8 +260,25 @@ The copy can then be viewed and it is also possible to make changes in the copy 
 
 [Back to top](<#contents>)
 
-* [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
+# **Credits**
+## Code Used
+  Code Institute DRF Tutorial Project, was used through out this project as a basis for the creation of this API
+* CREDIT: Code Institute DRF-API Tutuorial Project
+    -   [Code Institute, drf-api](https://github.com/Code-Institute-Solutions/drf-api)
+
+[Back to top](<#contents>)
+
+## Online Resources
+* [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+* [Django REST Documentation](https://www.django-rest-framework.org/)
+* [Python Documentation](https://docs.python.org/3/)
+* [Youtube tutorials](https://www.youtube.com/)
+
+[Back to top](<#contents>)
+
+## Acknowledgments
+* Code Institute for your tutor and student care support
+* My mentor Jubril Akolade for beeing there.
+* My family and cousin for your endless support.
+
+[Back to top](<#contents>)
