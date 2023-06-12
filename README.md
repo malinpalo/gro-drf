@@ -86,7 +86,7 @@ The relationship between all of the above models is summarized in the following 
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 * [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project.
 * [Lucidchart](https://drawsql.app/)  - Create the Entity Relationship Database schema (ERD).
-* [Unsplash](https://unsplash.com/) - A platform for free images
+* [Unsplash](https://unsplash.com/) - A platform for free images.
 * [ILOVEIMG](https://www.iloveimg.com/) - An online photo editor, used to resize images.
 
 [Back to top](<#contents>)
