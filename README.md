@@ -17,6 +17,7 @@
   * [Languages](#languages)
   * [Frameworks and software](#frameworks-and-software)
   * [Libraries](#libraries)
+  * [Media](#media)
 * [Testing](#testing)
 * [Deployment](#deployment)
     * [How to Fork](#how-to-fork)
@@ -34,7 +35,7 @@ The overall structure of the project was modelled on the [drf-api](https://githu
 I've tried to customize the walkthrough where possible to fit the scope for my own project. I also added a custom contact model.
 
 ## Agile Workflow
-I built this API using Agile principles right from the start by creating user stories for the developer/superuser to follow.
+I built this API using Agile principles right from the start by creating user stories in the front end project for the developer/superuser to follow.
 
 ## User Stories
 I have included links to the [GitHub Issues](https://github.com/malinpalo/gro/issues) for this project, as well as the [KANBAN board](https://github.com/malinpalo/gro/milestones).
@@ -75,6 +76,9 @@ The relationship between all of the above models is summarized in the following 
 * [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories and bug reports.
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 * [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project.
+* [Lucidchart](https://drawsql.app/)  - Create the Entity Relationship Database schema (ERD).
+* [Unsplash](https://unsplash.com/) - A platform for free images
+* [ILOVEIMG](https://www.iloveimg.com/) - An online photo editor, used to resize images.
 
 [Back to top](<#contents>)
 
@@ -101,6 +105,7 @@ The relationship between all of the above models is summarized in the following 
 * [sqlparse](https://pypi.org/project/sqlparse/)
 
 [Back to top](<#contents>)
+
 # **Testing**
 Please click [**_here_**](TESTING.md) to read more information about testing Gro-drf.
 
@@ -245,3 +250,9 @@ The copy can then be viewed and it is also possible to make changes in the copy 
 * ```python3 manage.py runserver``` - If everything i setup correctly the project is now live locally.
 
 [Back to top](<#contents>)
+
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
