@@ -64,7 +64,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '8000-malinpalo-gro-drf-lk9anj1tbn.us2.codeanyapp.com',
+    '8000-malinpalo-gro-drf-lk9anj1tbn.us2.codeanyapp.com', "https://3000-malinpalo-gro-zi2iffrxyc.us2.codeanyapp.com"
 ]
 
 
@@ -111,7 +111,7 @@ MIDDLEWARE = [
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = ['https://3000-malinpalo-gro-zi2iffrxyc.us2.codeanyapp.com', ]
+    CORS_ALLOWED_ORIGINS = [os.environ.get('CLIENT_ORIGIN'), ]
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
     CORS_ALLOWED_ORIGINS += [os.environ.get('CLIENT_ORIGIN_DEV')]
