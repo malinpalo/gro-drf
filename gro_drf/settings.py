@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import re
 from pathlib import Path
 import os
 import dj_database_url
-import re
 
 if os.path.exists('env.py'):
     import env
@@ -50,22 +50,23 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'gro_drf.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER':
+
+    'gro_drf.serializers.CurrentUserSerializer'
 }
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOST'),
-    '8000-malinpalo-grodrf-5s3w3ee5g7o.ws-eu100.gitpod.io',
-]
+    'localhost', 
+    '8000-malinpalo-grodrf-5s3w3ee5g7o.ws-eu100.gitpod.io']
 
 # Application definition
 
