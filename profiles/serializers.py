@@ -31,4 +31,4 @@ class ProfileSerializer(serializers.ModelSerializer):
             'id', 'owner', 'date_created', 'date_updated', 'name',
             'description', 'image', 'city', 'is_owner', 'following_id',
             'posts_count', 'followers_count', 'following_count',
-        ] 
+        ]
