@@ -10,7 +10,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=245, blank=True)
     description = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../gro_default_profile'
+        upload_to='images/', default='../gro_default_profile_p4nzko'
     )
     city = models.CharField(max_length=50, default='')
 
