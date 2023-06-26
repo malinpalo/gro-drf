@@ -21,7 +21,7 @@ This is the repository for the React backend of Gro.
   * [User Stories](#user-stories)
 * [Database Design](#databasedesign)
   * [Models](#models)
-  * [ERD](#erd)
+  * [Entity Realationship Diagram](#entity-realationship-diagram)
 * [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Frameworks and software](#frameworks-and-software)
@@ -65,7 +65,7 @@ The following models was created by me for the Gro drf:
 
 [Back to top](<#contents>)
 
-## Entity relationship diagram
+## Entity realationship diagram
 The relationship between all of the above models is summarized in the following diagram
 [ERD](https://res.cloudinary.com/dz0w8vqzx/image/upload/v1686515958/ERD_qrhzwo.png).
 
