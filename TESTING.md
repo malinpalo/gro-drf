@@ -16,7 +16,7 @@
 
 The GRO-DRF has been passed through the internal PEP8 validation tests.
 
-### gro_api files
+### gro_drf files
 
 * permissions.py - No problems or warnings found
 * serializers.py - No problems or warnings found
@@ -25,14 +25,6 @@ The GRO-DRF has been passed through the internal PEP8 validation tests.
 * urls.py - No problems or warnings found
 
 ### Comments App py files
-
-* models.py - No problems or warnings found
-* serializers.py - No problems or warnings found
-* tests.py - No problems or warnings found
-* urls.py - No problems or warnings found
-* views.py - No problems or warnings found
-
-### Contact App py files
 
 * models.py - No problems or warnings found
 * serializers.py - No problems or warnings found

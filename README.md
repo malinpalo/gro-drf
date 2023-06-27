@@ -10,9 +10,9 @@ The primary goals of the web app are to:
 
 This is the repository for the React backend of Gro.
 
-#### DEPLOYED BACKEND API [LINK]()
-#### DEPLOYED FRONTEND [LINK - LIVE SITE]()
-#### DEPLOYED FRONTEND [REPOSITORY]()
+#### DEPLOYED BACKEND API [LINK](https://gro-drf.herokuapp.com/)
+#### DEPLOYED FRONTEND [LINK - LIVE SITE](https://gro-pp5.herokuapp.com/)
+#### DEPLOYED FRONTEND [REPOSITORY](https://github.com/malinpalo/gro)
 
 ## CONTENTS
 
