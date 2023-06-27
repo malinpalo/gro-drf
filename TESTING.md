@@ -7,6 +7,7 @@
 * [**Testing**](<#testing>)
     * [Code Validation](<#code-validation>)
     * [Manual Testing](<#manual-testing>)
+      + [CRUD functionality](<#crud-functionality>)
     * [Bugs](<#bugs>)
 
 ## Code Validation 
@@ -72,6 +73,9 @@ The GRO-DRF has been passed through the internal PEP8 validation tests.
 * views.py - No problems or warnings found
 
 ## Manual testing 
+
+- CRUD functionality has been tested for each of the following: Posts | Contact | Comments | Likes | Follow | Profile.
+
 
 | Status | **Comments**
 |:-------:|:--------|
